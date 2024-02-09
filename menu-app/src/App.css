@@ -5,13 +5,26 @@
 .app-background {
   background-color: #f8d2de;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo img {
+  height: 300px; 
+}
 .subheading {
   font-family: 'Satisfy', cursive;
   font-size: 150%;
-  color: #1678c4;
+  text-align: center;
+  color: #1e9dff;
 }
 
+.subheading2 {
+  color: #024379;
+  font-weight: bold;
+  text-align: center;
+}
 .menu-container {
   display: flex;
   flex-direction: column;

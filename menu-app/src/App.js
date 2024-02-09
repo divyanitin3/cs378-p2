@@ -1,6 +1,7 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
-import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
+import Header from './components/Header';
+//import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
 
 // Menu data. An array of objects where each object represents a menu item. Each menu item has an id, title, description, image name, and price.
 // You can use the image name to get the image from the images folder.
@@ -77,16 +78,24 @@ const menuItems = [
   }
 ];
 
+const headerMenu = [
+  {
+    imageName: 'logo.webp',
+    subheading: 'Super Slay Recipes at Sakura Bistro',
+    subheading2: 'Best Food in Austin!'
+  }
+]
+
 function App() {
   return (
     <div className="app-background">
-      <header className="text-center mb-4">
-      <img src="logo.webp" alt="Sakura Bistro Logo" className="logo img-fluid mb-3" 
-      style={{ width: '500px', height: 'auto' }}/>
-      <h1 className="tagline display-6">Super Slay Recipes at Sakura Bistro!</h1>
-      <h2 className="subheading">Best Food in Austin!</h2>
-
-      </header>
+      {headerMenu.map((header) => (
+        <Header
+          imageName={header.imageName}
+          subheading={header.subheading}
+          subheading2={header.subheading2}
+        />
+      ))}
       <div className="menu">
       {menuItems.map((menuItem) => (
           <MenuItem
