@@ -24,7 +24,7 @@ const MenuItem = ({ title, description, imageName, price }) => {
                     </div>
                     <div className="menu-card-footer d-flex justify-content-between align-items-center">
                         <p className="menu-price-text">Price: ${price}</p>
-                        <button className="menu-add-btn rounded-3" style={{ backgroundColor: '#dc3545', color: 'white' }}>
+                        <button className="menu-add-btn rounded-3" style={{color: 'white' }}>
                             Add
                         </button>
                     </div>
